@@ -1,0 +1,153 @@
+﻿document.addEventListener('DOMContentLoaded', function () {
+
+    mostrarToastLoginPA("Senha criada com sucesso!");
+
+    $("#btnMostrarSenha").click(function () {
+        TrocarTipoInputSenha("password-field");
+        $("#btnOcultarSenha").removeClass("d-none").addClass("d-block");
+        $("#btnMostrarSenha").removeClass("d-block").addClass("d-none");
+    });
+    $("#btnOcultarSenha").click(function () {
+        TrocarTipoInputSenha("password-field");
+        $("#btnMostrarSenha").removeClass("d-none").addClass("d-block");
+        $("#btnOcultarSenha").removeClass("d-block").addClass("d-none");
+    });
+
+    const navigationSessionID = getOrCreateNavigationSessionID(); // Identificador único
+    const fingerprintData = getFingerprint(); // Dados do fingerprint
+
+    $("#NavigationSessionID").val(navigationSessionID);
+    $("#FingerprintData").val(btoa(JSON.stringify(fingerprintData)));
+
+    //const clientIP = getIp();
+});
+
+
+// Função para criar um identificador único simples (UUID-like)
+function generateUniqueID() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (char) => {
+        const rand = (Math.random() * 16) | 0;
+        const value = char === 'x' ? rand : (rand & 0x3) | 0x8;
+        return value.toString(16);
+    });
+}
+
+// Função para obter ou criar um identificador único
+function getOrCreateNavigationSessionID() {
+    let navigationSessionID = localStorage.getItem('navigationSessionID');
+
+    if (!navigationSessionID) {
+        navigationSessionID = generateUniqueID();
+        localStorage.setItem('navigationSessionID', navigationSessionID);
+    }
+
+    return navigationSessionID;
+}
+
+// Função para definir dados no localStorage com expiração
+function setLocalStorageWithExpiration(key, value, expirationMinutes) {
+    const expirationTime = new Date().getTime() + (expirationMinutes * 60 * 1000); // tempo de expiração em milissegundos
+    const data = {
+        value: value,
+        expiration: expirationTime
+    };
+    localStorage.setItem(key, JSON.stringify(data));
+}
+
+// Função para obter dados do localStorage com verificação de expiração
+function getLocalStorageWithExpiration(key) {
+    const data = JSON.parse(localStorage.getItem(key));
+
+    if (data) {
+        const currentTime = new Date().getTime();
+
+        // Verifica se o dado expirou
+        if (currentTime > data.expiration) {
+            localStorage.removeItem(key); // Remove o item se expirou
+            return null; // Retorna null se expirou
+        } else {
+            return data.value; // Retorna o valor se não expirou
+        }
+    }
+    return null; // Retorna null se não houver dado
+}
+
+//Função para obter IP com localStorage e fallback para ipify
+function getIp() {
+    let ip = getLocalStorageWithExpiration('userIp');
+    if (!ip) {
+        try {
+            const response = axios.get('https://api.ipify.org?format=json', { timeout: 5000 }); // Timeout de 5 segundos
+            ip = response.data.ip;
+            setLocalStorageWithExpiration('userIp', ip, 5); // Expira em 5 minutos
+        } catch (error) {
+            console.error('Erro ao obter IP do cliente', error);
+            return '0.0.0.0'; // Fallback para um IP default em caso de erro ou timeout
+        }
+    }
+    return ip;
+}
+
+
+function TrocarTipoInputSenha(idInput) {
+    var x = document.getElementById(idInput);
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }    
+}
+
+const getFingerprint = () => {
+    const fingerprint = {
+        userAgent: navigator.userAgent,
+        language: navigator.language,
+        screenResolution: `${window.screen.width}x${window.screen.height}`,
+        viewportDimensions: `${window.innerWidth}x${window.innerHeight}`,
+        deviceMemory: navigator.deviceMemory || 'N/A',
+        hardwareConcurrency: navigator.hardwareConcurrency || 'N/A',
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        platform: navigator.platform,
+        cookiesEnabled: navigator.cookieEnabled,
+        colorDepth: window.screen.colorDepth,
+        isOnline: navigator.onLine,
+        historyLength: window.history.length,
+        connectionType: navigator.connection && navigator.connection.effectiveType || 'N/A',
+        connectionDownlink: navigator.connection && navigator.connection.downlink || 'N/A',
+        acceptedLanguages: navigator.languages || [],
+        orientation: screen.orientation && screen.orientation.type || 'N/A',
+        pointerCapabilities: navigator.maxTouchPoints > 0 ? 'touch' : 'mouse',
+        plugins: Array.from(navigator.plugins).map((p) => p.name),
+        localStorageEnabled: typeof window.localStorage !== 'undefined',
+        isRetina: window.devicePixelRatio > 1,
+        supportsTouch: 'ontouchstart' in window || navigator.maxTouchPoints > 0,
+        supportsWebRTC: typeof RTCPeerConnection !== 'undefined',
+    };
+
+    try {
+        const canvas = document.createElement('canvas');
+        const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+        const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+        fingerprint.webGLInfo = {
+            renderer: gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL),
+            vendor: gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL),
+        };
+    } catch (e) {
+        fingerprint.webGLInfo = { renderer: 'N/A', vendor: 'N/A' };
+    }
+
+    return fingerprint;
+};
+
+function mostrarToastLoginPA(texto) {
+    var alteracaoSenha = $("#AlteracaoSenha").val() == "True";
+
+    if (alteracaoSenha) {
+        $("#toastLoginPA").removeClass("d-none").addClass("d-block");
+        document.getElementById("txtToastLoginPA").innerText = texto;
+
+        setTimeout(function () {
+            $("#toastLoginPA").removeClass("d-block").addClass("d-none");
+        }, 3000);
+    }
+}

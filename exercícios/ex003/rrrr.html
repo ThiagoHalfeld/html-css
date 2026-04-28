@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- saved from url=(0363)https://segurancaapi.appai.org.br/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DClient_ID_PA%26redirect_uri%3Dhttps%253A%252F%252Fassociado.appai.org.br%252Fcallback%26response_type%3Did_token%2520token%26scope%3Dopenid%2520roles%2520email%2520profile%26state%3Dd31646c2bc0541a3b25af8aa665944d5%26nonce%3D71b16fb224354029836893a132b1189e -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+    
+    <script type="text/javascript" async="" charset="utf-8" src="./rrrr_files/recaptcha__pt_br.js.download" crossorigin="anonymous" integrity="sha384-uGKh2NQ6kZWMV93tK759otu8U+pjrTvZikW7xtZ7Hv/vs/cSQXlq9tP/gNxrNop5"></script><script src="./rrrr_files/api.js.download"></script>
+    <script src="./rrrr_files/zxcvbn.js.download"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Security-Policy" content="img-src &#39;self&#39; data: https://discosappai.blob.core.windows.net/ https://ambienteteste.blob.core.windows.net/; &#39;self&#39; https://use.fontawesome.com/ https://fonts.googleapis.com/;">
+    <title>Portal Associado - Appai</title>
+    <link rel="icon" type="image/x-icon" href="https://segurancaapi.appai.org.br/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://segurancaapi.appai.org.br/images/favicon.ico">
+    <link rel="apple-touch-icon" type="image/x-icon" href="https://segurancaapi.appai.org.br/images/favicon.ico">
+
+    
+    
+        <link href="./rrrr_files/bundle.min.css" rel="stylesheet">
+        <link href="./rrrr_files/web.min.css" rel="stylesheet">
+        <link href="./rrrr_files/style.css" rel="stylesheet">
+
+    
+
+    
+</head>
+
+<body class="body-backPA">
+     
+<!--<div class="login-page">-->
+<!--  <div class="page-header">
+<!--  <h1>Title</h1>
+</div>
+
+await Html.PartialAsync("_ValidationSummary")-->
+
+
+<style>
+    .logo-desktop {
+        display: block;
+    }
+
+    .logo-mobile {
+        display: none;
+    }
+
+    @media (max-width: 992px){
+        .logo-desktop {
+            display: none;
+        }
+
+        .logo-mobile {
+            display: block;
+        }
+    }
+
+</style>
+
+<div class="row">
+
+        <input type="hidden" value="Client_ID_PA" id="ClientId" name="ClientId">
+        <input type="hidden" value="" data-val="true" data-val-required="The AlteracaoSenha field is required." id="AlteracaoSenha" name="AlteracaoSenha">
+        <div id="app" class="container-fluid no-padding">
+            <div id="loginView" class="row">
+                <div class="toast d-none" id="toastLoginPA">
+                    <div class="img-toast">
+                        <svg viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.075 20.7361L21.7688 11.0424L19.8438 9.11738L12.075 16.8861L8.15625 12.9674L6.23125 14.8924L12.075 20.7361ZM14 28.1611C12.0979 28.1611 10.3104 27.8002 8.6375 27.0783C6.96458 26.3564 5.50938 25.3768 4.27187 24.1393C3.03437 22.9018 2.05469 21.4466 1.33281 19.7736C0.610937 18.1007 0.25 16.3132 0.25 14.4111C0.25 12.509 0.610937 10.7215 1.33281 9.04863C2.05469 7.37572 3.03437 5.92051 4.27187 4.68301C5.50938 3.44551 6.96458 2.46582 8.6375 1.74395C10.3104 1.02207 12.0979 0.661133 14 0.661133C15.9021 0.661133 17.6896 1.02207 19.3625 1.74395C21.0354 2.46582 22.4906 3.44551 23.7281 4.68301C24.9656 5.92051 25.9453 7.37572 26.6672 9.04863C27.3891 10.7215 27.75 12.509 27.75 14.4111C27.75 16.3132 27.3891 18.1007 26.6672 19.7736C25.9453 21.4466 24.9656 22.9018 23.7281 24.1393C22.4906 25.3768 21.0354 26.3564 19.3625 27.0783C17.6896 27.8002 15.9021 28.1611 14 28.1611Z" fill="#0F5132"></path>
+                        </svg>
+                    </div>
+                    <div class="txt-toast" id="txtToastLoginPA"></div>
+                </div>
+                <div class="col xs-12 col-sm-12 col-md-12 col-lg-6 bg-cinza4 no-padding">
+                    <div class="container pr-5 pl-5 pr-sm-1 pl-sm-1">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1 col-lg-7 offset-lg-3 mt-md-2 mt-sm-1">
+
+                                <!-- Logo Desktop -->
+                                    <img src="./rrrr_files/logoappai.png" alt="Logo do portal dos associados Appai" class="logo logo-desktop">
+
+                                <!-- Logo Mobile -->
+                                    <img src="./rrrr_files/logoappai.png" alt="Logo Mobile" class="logo logo-mobile">
+
+                            </div>
+
+
+                            <div class="col-md-10 offset-md-1 col-lg-8 col-xl-7 offset-lg-3 mt-md-3 mt-sm-1">
+                                <h2 class="titles-non-italic">Acesso do associado</h2>
+                            </div>
+                                <div role="alert" class="col-md-10 offset-md-1 col-lg-8 col-xl-7 offset-lg-3 mt-md-3 mt-sm-1 alert alert-warning">
+                                    <div class="row align-items-center">
+                                        <div class="col-12">
+                                            Login e senhas inválidos
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <div class="col-md-10 offset-md-1 col-lg-8 col-xl-7 offset-lg-3 mt-1">
+                                <form action="https://segurancaapi.appai.org.br/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DClient_ID_PA%26redirect_uri%3Dhttps%253A%252F%252Fassociado.appai.org.br%252Fcallback%26response_type%3Did_token%2520token%26scope%3Dopenid%2520roles%2520email%2520profile%26state%3Dd31646c2bc0541a3b25af8aa665944d5%26nonce%3D71b16fb224354029836893a132b1189e" method="post">
+                                    <input type="hidden" value="/connect/authorize/callback?client_id=Client_ID_PA&amp;redirect_uri=https%3A%2F%2Fassociado.appai.org.br%2Fcallback&amp;response_type=id_token%20token&amp;scope=openid%20roles%20email%20profile&amp;state=d31646c2bc0541a3b25af8aa665944d5&amp;nonce=71b16fb224354029836893a132b1189e" id="ReturnUrl" name="ReturnUrl">
+                                    <div class="form-group">
+                                        <div class="d-block">
+                                            <label for="matricula" class="float-left">Matrícula Appai</label>
+                                            <a data-target="#ModalMatriculaAppai" data-toggle="modal" class="support-text-question float-right" href="https://segurancaapi.appai.org.br/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DClient_ID_PA%26redirect_uri%3Dhttps%253A%252F%252Fassociado.appai.org.br%252Fcallback%26response_type%3Did_token%2520token%26scope%3Dopenid%2520roles%2520email%2520profile%26state%3Dd31646c2bc0541a3b25af8aa665944d5%26nonce%3D71b16fb224354029836893a132b1189e#ModalMatriculaAppai">O QUE É ISSO?</a>
+                                        </div>
+                                        <div role="dialog" class="modal" id="ModalMatriculaAppai">
+                                            <div role="document" class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 id="exampleModalLabel" class="modal-title">O que é a Matrícula Appai?</h4>
+                                                        <button type="button" aria-label="Close" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            A Matrícula Appai é composta por 8 dígitos e mais os sequenciais, com mais 2 dígitos. XXXXXXXX-XX<br><br>
+                                                            Você pode encontrá-la no verso da sua Carteira Appai.<br>
+                                                            Procure pelo número ao lado do texto "Matrícula Appai"<br>
+                                                            Exemplo: Matrícula Appai: 12345678-90<br>
+                                                        </p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-medio" data-dismiss="modal">Fechar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input type="text" id="UserName" name="Username" placeholder="00000000-00 (somente números)" class="form-control maskMatricula" autocomplete="off" maxlength="11">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="senha">Senha</label>
+                                        <a class="support-text-show-pass field-icon toggle-password float-right" id="btnMostrarSenha">
+                                            MOSTRAR SENHA
+                                        </a>
+                                        <a class="support-text-show-pass field-icon toggle-password float-right d-none" id="btnOcultarSenha">
+                                            OCULTAR SENHA
+                                        </a>
+                                        <input type="password" name="Password" placeholder="Insira sua senha" id="password-field" class="form-control" autocomplete="off">
+                                    </div>
+                                    <div>
+                                        <div class="g-recaptcha" data-sitekey="6LfG8HMmAAAAAKstL0XJsc26Vp4E7btBE7j98P6S"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-al3f9adfjpry" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="./rrrr_files/anchor.html"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="./rrrr_files/saved_resource.html"></iframe></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="hidden" id="NavigationSessionID" name="NavigationSessionID" class="form-control" value="94c13233-55bd-4017-a142-1267d6a6230b">
+                                        <input type="hidden" id="FingerprintData" name="FingerprintData" class="form-control" value="eyJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTQ3LjAuMC4wIFNhZmFyaS81MzcuMzYiLCJsYW5ndWFnZSI6InB0LUJSIiwic2NyZWVuUmVzb2x1dGlvbiI6IjE5MjB4MTA4MCIsInZpZXdwb3J0RGltZW5zaW9ucyI6IjE5MjB4OTQ1IiwiZGV2aWNlTWVtb3J5IjoxNiwiaGFyZHdhcmVDb25jdXJyZW5jeSI6NCwidGltZXpvbmUiOiJBbWVyaWNhL1Nhb19QYXVsbyIsInBsYXRmb3JtIjoiV2luMzIiLCJjb29raWVzRW5hYmxlZCI6dHJ1ZSwiY29sb3JEZXB0aCI6MzIsImlzT25saW5lIjp0cnVlLCJoaXN0b3J5TGVuZ3RoIjoxLCJjb25uZWN0aW9uVHlwZSI6IjRnIiwiY29ubmVjdGlvbkRvd25saW5rIjoxLjU1LCJhY2NlcHRlZExhbmd1YWdlcyI6WyJwdC1CUiIsInB0IiwiZW4tVVMiLCJlbiJdLCJvcmllbnRhdGlvbiI6ImxhbmRzY2FwZS1wcmltYXJ5IiwicG9pbnRlckNhcGFiaWxpdGllcyI6Im1vdXNlIiwicGx1Z2lucyI6WyJQREYgVmlld2VyIiwiQ2hyb21lIFBERiBWaWV3ZXIiLCJDaHJvbWl1bSBQREYgVmlld2VyIiwiTWljcm9zb2Z0IEVkZ2UgUERGIFZpZXdlciIsIldlYktpdCBidWlsdC1pbiBQREYiXSwibG9jYWxTdG9yYWdlRW5hYmxlZCI6dHJ1ZSwiaXNSZXRpbmEiOmZhbHNlLCJzdXBwb3J0c1RvdWNoIjpmYWxzZSwic3VwcG9ydHNXZWJSVEMiOnRydWUsIndlYkdMSW5mbyI6eyJyZW5kZXJlciI6IkFOR0xFIChOVklESUEsIE5WSURJQSBHZUZvcmNlIEdUWCAxMDYwIDZHQiAoMHgwMDAwMUMwMykgRGlyZWN0M0QxMSB2c181XzAgcHNfNV8wLCBEM0QxMSkiLCJ2ZW5kb3IiOiJHb29nbGUgSW5jLiAoTlZJRElBKSJ9fQ==">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" value="Acessar o Portal" class="btn btn-medio-full mt-2" id="btnLogin">
+                                        <input type="hidden" name="button" value="login">
+                                    </div>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BjmW_DbzJpGq8ji2PPRA42C_aPwHPCcSq36ycLuCCVc8AKrTED69MWz8SHmBnUzUfQTUTwL9uUkAOHgpxJghVx2bN2pW8aLaovj9rSPihQ3KW6AX-9RaPZ9m2mCGGFQrnrscskGzpNnPg2y-hIr9hE"></form>
+                            </div>
+                            <div class="col-md-10 offset-md-1 col-lg-8 col-xl-7 offset-lg-3">
+                                <div class="row">
+                                    <div class="col-6 d-flex justify-content-start mt-md-4 mt-sm-4 mt-5">
+                                        <a class="support-text-login" href="https://segurancaapi.appai.org.br/Account/ResetPassword?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DClient_ID_PA%26redirect_uri%3Dhttps%253A%252F%252Fassociado.appai.org.br%252Fcallback%26response_type%3Did_token%2520token%26scope%3Dopenid%2520roles%2520email%2520profile%26state%3Dd31646c2bc0541a3b25af8aa665944d5%26nonce%3D71b16fb224354029836893a132b1189e&amp;ClientID=Client_ID_PA">Esqueceu sua senha?</a>
+                                    </div>
+                                        <div class="col-6 d-flex justify-content-end mt-md-4 mt-sm-4 mt-5">
+                                            <a class="support-text-login" href="https://segurancaapi.appai.org.br/Account/FirstAccess?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DClient_ID_PA%26redirect_uri%3Dhttps%253A%252F%252Fassociado.appai.org.br%252Fcallback%26response_type%3Did_token%2520token%26scope%3Dopenid%2520roles%2520email%2520profile%26state%3Dd31646c2bc0541a3b25af8aa665944d5%26nonce%3D71b16fb224354029836893a132b1189e&amp;ClientID=Client_ID_PA">Meu primeiro acesso</a>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-md-10 offset-md-1 col-lg-8 col-xl-7 offset-lg-3 mt-5">
+                                    <a class="btn btn-outline btn-medio-full mt-2" href="https://segurancaapi.appai.org.br/Account/LoginConvidado?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DClient_ID_PA%26redirect_uri%3Dhttps%253A%252F%252Fassociado.appai.org.br%252Fcallback%26response_type%3Did_token%2520token%26scope%3Dopenid%2520roles%2520email%2520profile%26state%3Dd31646c2bc0541a3b25af8aa665944d5%26nonce%3D71b16fb224354029836893a132b1189e">
+                                        Acesso para requerente
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col xs-12 col-sm-12 col-md-6 col-lg-6 login-fundo-img d-none d-lg-block">
+                    <div class="container">
+                        <div class="row mt-5 position-fixed">
+                            <div class="col-12 offset-1 mt-5 texto-loginpage">
+                                <h1>Bem-vindo ao<br><strong>Portal do Associado </strong><br>Appai</h1>
+                                <p class="mt-5">Entre com sua matrícula e tenha<br>acesso a todos os benefícios.</p>
+                                <div class="row img-direita-login">
+                                    <div class="col-5">
+                                        <img src="./rrrr_files/logoappaibranca.png" alt="Appai logo">
+                                    </div>
+                                    <div class="col-5 mt-3">
+                                        <img src="./rrrr_files/seloseguranca.png" alt="selos de segurança">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+<script src="./rrrr_files/LoginPA.js.download"></script>
+    
+    
+        <script src="./rrrr_files/bundle.min.js.download"></script>
+        <script src="./rrrr_files/jquery.mask.min.js.download"></script>
+        <script src="./rrrr_files/PortalAssociado.js.download"></script>
+    
+
+    
+
+
+
+
+
+<veepn-lock-screen><template shadowrootmode="open"><style>html{box-sizing:border-box;text-size-adjust:100%;word-break:normal;tab-size:4}*,:before,:after{background-repeat:no-repeat;box-sizing:border-box}:before,:after{text-decoration:inherit;vertical-align:inherit}*{padding:0;margin:0}hr{overflow:visible;height:0;color:inherit;border:0;border-top:1px solid}details,main{display:block}summary{display:list-item}small{font-size:80%}[hidden]{display:none!important}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}a{background-color:transparent}a:active,a:hover{outline-width:0}code,kbd,pre,samp{font-family:monospace}pre{font-size:1em}b,strong{font-weight:bolder}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-color:inherit;text-indent:0}iframe{border-style:none}input{border-radius:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{appearance:none}textarea{overflow:auto;resize:vertical}button,input,optgroup,select,textarea{font:inherit;color:inherit}optgroup{font-weight:700}button{overflow:visible}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit],[role=button]{cursor:pointer}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button,html [type=button],[type=reset],[type=submit]{appearance:auto}button,input,select,textarea{background-color:transparent;border-style:none}button:-moz-focusring,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{outline:1px dotted ButtonText}select{appearance:none}a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-width:0}select::-ms-expand{display:none}select::-ms-value{color:currentcolor}legend{border:0;color:inherit;display:table;white-space:normal;max-width:100%}::-webkit-file-upload-button{appearance:auto;color:inherit;font:inherit}[disabled]{cursor:default}img{border-style:none}progress{vertical-align:baseline}[aria-busy=true]{cursor:progress}[aria-controls]{cursor:pointer}[aria-disabled=true]{cursor:default}ul,ol{list-style-type:none}figure{margin:0}@keyframes slide-in{0%{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}.gradient-blue{background:radial-gradient(106.41% 128.47% at 50.15% 128.47%,#23abff,#3066ff)}.gradient-green{background:radial-gradient(92.26% 118.88% at 50.15% .13%,#00c3c3,#00aab3)}.gradient-purple{background:radial-gradient(165.12% 115.56% at 50.15% .13%,#a15aff,#00a0eb)}.bg-blue{background-color:#f2f5ff}.bg-purple{background-color:#f7f0ff}.bg-green{background-color:#ebffed}.lock-screen{font-family:FigtreeVF,sans-serif;letter-spacing:normal;position:fixed;z-index:2147483638;right:24px;bottom:24px;width:327px;border-radius:24px;overflow:hidden;box-shadow:0 24px 32px #00000014;animation:slide-in .3s ease-in-out forwards}.lock-screen__content{position:relative;padding:24px 24px 64px}.lock-screen__close{position:absolute;top:16px;right:16px;width:24px;height:24px;display:flex;align-items:center;justify-content:center;opacity:.5}.lock-screen__label{height:26px;width:fit-content;border-radius:50px;background-color:#fff3;padding-inline:16px;display:flex;align-items:center;justify-content:center;gap:8px;color:#fff;font-size:12px;line-height:18px;margin:-8px auto 16px}.lock-screen__title{color:#fff;text-align:center;font-size:20px;line-height:28px;font-weight:600;margin-bottom:8px}.lock-screen__description{color:#f5f6f7;text-align:center;font-size:14px;line-height:20px}.lock-screen__description b{font-weight:600}.lock-screen__card{position:relative;z-index:1;margin-top:-44px;background-color:#fff;border-radius:24px;padding:32px 20px 20px}.lock-screen__inner{margin-bottom:24px}.lock-screen__submit{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:16px;height:40px;width:100%;border-radius:12px;padding-inline:16px;background-color:#f70;color:#fff;margin-bottom:16px}.lock-screen__skip{display:flex;align-items:center;justify-content:center;font-size:14px;line-height:20px;color:#82829c;margin-inline:auto}.price-card{border:1px solid #f2f2fc;background:linear-gradient(254.14deg,#fafbff .04%,#f5f8ff 100.04%);border-radius:24px;padding:24px 28px}.price-card__label{color:#4a5764;text-align:center;font-size:14px;line-height:20px;text-transform:uppercase;margin-bottom:16px}.price-card__price{display:flex;justify-content:center;align-items:flex-start;column-gap:2px;margin-bottom:12px}.price-card__currency{color:#515478;font-size:18px;line-height:28px}.price-card__number{color:#14142a;text-align:center;font-size:64px;line-height:54px}.price-card__wrap{display:flex;flex-direction:column}.price-card__decimal{color:#515478;font-size:18px;line-height:28px;font-weight:600}.price-card__period{color:#515478;font-size:14px;line-height:20px;margin-top:-6px}.price-card__discount{position:relative;display:flex;align-items:center;justify-content:center;margin-bottom:12px}.price-card__discount-divider{position:absolute;z-index:0;top:50%;left:0;width:100%;height:1px;background-color:#dbe2f9;transform:translateY(-50%)}.price-card__discount-icon{position:absolute;z-index:1;top:50%;left:50%;transform:translate(-50%,-50%)}.price-card__discount-text{position:relative;z-index:2;color:#fff;font-size:12px;font-weight:600;line-height:18px}.price-card__features{display:flex;align-items:center;justify-content:center;column-gap:16px}.price-card__feature{color:#222e3a;font-size:14px;line-height:20px;display:flex;align-items:center;gap:6px}.price-card__feature:before{content:"";display:block;width:4px;height:4px;background-color:#20df9e;border-radius:50%;flex-shrink:0}.features-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.features-list__item{display:flex;flex-direction:column;align-items:center;gap:6px}.features-list__icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center}.features-list__text{color:#293a53;text-align:center;font-size:16px;line-height:24px;letter-spacing:-.1px}</style></template><style>@font-face{font-family:FigtreeVF;src:url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) format("woff2 supports variations"),url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) format("woff2-variations");font-weight:100 1000;font-display:swap}</style></veepn-lock-screen><div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility linear 0.3s, opacity 0.3s linear; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="o desafio reCAPTCHA expira em dois minutos" name="c-al3f9adfjpry" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="./rrrr_files/bframe.html" style="width: 100%; height: 100%;"></iframe></div></div></body></html>
